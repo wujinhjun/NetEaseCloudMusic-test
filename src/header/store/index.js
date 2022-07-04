@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const defaultState = {
-    active: 0,
+    active: '发现音乐',
 }
 
 const headerSlice = createSlice({
