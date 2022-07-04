@@ -152,4 +152,8 @@ export const Login = styled.a`
     color: #787878;
     font-size: 12px;
     cursor: pointer;
+    :hover {
+        color: #999;
+        text-decoration: underline;
+    }
 `;
