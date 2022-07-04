@@ -7,3 +7,4 @@ This is an attempt to reproduce NetEaseCloud at the pixel level by react
 ******
 
 * 7.2: reproduce the header
+* 7.4: reproduce the header perfectly
