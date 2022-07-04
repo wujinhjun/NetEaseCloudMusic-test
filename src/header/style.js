@@ -55,14 +55,21 @@ export const NavItem = styled.div`
         float: left;
         cursor: default;
     };
-    :hover {
+    &.active, :hover {
         background-color: #000;
         color: #fff;
     };
-    :focus {
-        background-image: url(${pic});
-        background-position: -226px 0;
-    }
+`;
+
+export const IconBottom = styled.div`
+    background-image: url(${pic});
+    display: block;
+    width: 12px;
+    height: 7px;
+    background-position: -226px 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+    transform: translateY(-6px);
 `;
 
 export const HotIcon = styled.div`
