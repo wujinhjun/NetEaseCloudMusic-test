@@ -98,6 +98,7 @@ export const NavSearchBar = styled.input`
     ::placeholder {
         transform: translate(0px, 1px);
         font-size: 12px;
+        color: #9b9b9b;
     };
 
     :focus-visible {
