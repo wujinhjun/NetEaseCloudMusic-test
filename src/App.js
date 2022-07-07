@@ -1,5 +1,5 @@
 import Header from './header';
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import FindMusic from './pages/find-music';
 import { Fragment } from 'react';
 

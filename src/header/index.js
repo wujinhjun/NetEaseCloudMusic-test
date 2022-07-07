@@ -16,8 +16,6 @@ import {
 } from './style.js';
 
 const Header = (props) => {
-    const listName = ["发现音乐", "我的音乐", "关注", "商城", "音乐人", "下载客户端"];
-    const listLink = ['https://music.163.com/store/product'];
     const dispatch = useDispatch();
     const { active } = props;
     return (

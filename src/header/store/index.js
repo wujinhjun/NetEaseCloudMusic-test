@@ -10,7 +10,7 @@ const headerSlice = createSlice({
     reducers: {
         changeChoose: (state, action) => {
             state.active = action.payload;
-            // console.log(action.payload);
+            console.log(action);
         }
     }
 });
