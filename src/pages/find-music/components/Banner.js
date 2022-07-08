@@ -25,19 +25,25 @@ const Banner = (props) => {
     }, [])
 
     const valuePresent = useSelector((state) => state.findMusic.valuePresent);
+    const pictureData = useSelector((state) => state.findMusic.pictureData);
     const list = Array.from(Array(8), (item, index) => index);
-    // const { valuePresent } = props;
-    // setTimeout(dispatch(nextPic()), 1000);
+    let back;
+    let image;
+    if (pictureData[valuePresent]) {
+        back = pictureData[valuePresent].backImg;
+        image = pictureData[valuePresent].image;
+    }
+    // (pictureData[valuePresent]) && (const back = pictureData[valuePresent].backImg)
     return (
-        <Fragment>
+        (pictureData[valuePresent]) && (<Fragment>
             <BannerWrapper
                 style={{
-                    backgroundImage: `url(https://raw.githubusercontent.com/wujinhjun/wujinhjun-pic/main/041.jpg)`,
+                    backgroundImage: `url(${back})`,
                 }}>
                 <BannerContainer>
                     <BannerImg
                         style={{
-                            backgroundImage: `url(https://raw.githubusercontent.com/wujinhjun/wujinhjun-pic/main/04.jpg)`,
+                            backgroundImage: `url(${image})`,
                         }} />
                     <LeftArrow onClick={() => dispatch(lastPic())} />
                     <RightArrow onClick={() => dispatch(nextPic())} />
@@ -63,7 +69,7 @@ const Banner = (props) => {
                     </CardDownloadContainer>
                 </BannerContainer>
             </BannerWrapper>
-        </Fragment >
+        </Fragment >)
     )
 };
 
