@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import {
     BannerWrapper,
     BannerImg,
@@ -13,13 +13,21 @@ import {
     DotsContainer,
     DotItem
 } from "../style";
-import { useDispatch, connect } from "react-redux";
-import { changeClickChoose, lastPic, nextPic } from '../store';
+import { useDispatch, useSelector } from "react-redux";
+import { changeClickChoose, lastPic, nextPic, getInfoBanner } from '../store';
 
 const Banner = (props) => {
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        console.log('mounted');
+        dispatch(getInfoBanner());
+    }, [])
+
+    const valuePresent = useSelector((state) => state.findMusic.valuePresent);
     const list = Array.from(Array(8), (item, index) => index);
-    const { valuePresent } = props;
+    // const { valuePresent } = props;
+    // setTimeout(dispatch(nextPic()), 1000);
     return (
         <Fragment>
             <BannerWrapper
@@ -37,16 +45,13 @@ const Banner = (props) => {
                     <DotsContainer>
                         {
                             list.map((item, index) => {
-                                if (index === valuePresent) {
-                                    return (
-                                        <DotItem className="active" key={item} onClick={() => dispatch(changeClickChoose(index))}></DotItem>
-                                    )
-                                } else {
-                                    return (
-                                        <DotItem key={item} onClick={() => dispatch(changeClickChoose(index))}></DotItem>
-                                    )
-                                }
-
+                                // console.log(valuePresent);
+                                return (
+                                    <DotItem
+                                        className={item === valuePresent ? "active" : ""}
+                                        key={item}
+                                        onClick={() => dispatch(changeClickChoose(index))} />
+                                )
                             })
                         }
                     </DotsContainer>
@@ -62,12 +67,4 @@ const Banner = (props) => {
     )
 };
 
-
-
-const mapState = (state) => {
-    return {
-        valuePresent: state.findMusic.valuePresent
-    }
-}
-
-export default connect(mapState, null)(Banner);
+export default Banner;

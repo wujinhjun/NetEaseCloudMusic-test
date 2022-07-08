@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
 
 const defaultState = {
-    pictureDate: [],
+    pictureData: [],
     valuePresent: 0,
     minValueBanner: 0,
     maxValueBanner: 7,
@@ -27,11 +28,27 @@ const findMusicSlice = createSlice({
         },
         changeClickChoose: (state, action) => {
             state.valuePresent = action.payload;
-            console.log(action);
-        }
+            console.log(action.payload);
+        },
     }
 });
 
-export const { changeClickChoose, lastPic, nextPic } = findMusicSlice.actions;
+const getInfoFromJson = (state) => {
+    axios.get('/api/banner.json')
+        .then((res) => {
+            console.log(res.data.data);
+            state.pictureData = res.data.data.pictureData;
+        })
+        .catch(() => {
+            console.log("fail");
+        })
+}
+
+export const {
+    changeClickChoose,
+    lastPic,
+    nextPic,
+    getInfoBanner,
+} = findMusicSlice.actions;
 
 export default findMusicSlice.reducer;
