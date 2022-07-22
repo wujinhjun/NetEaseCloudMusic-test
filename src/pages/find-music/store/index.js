@@ -30,6 +30,9 @@ const findMusicSlice = createSlice({
             state.valuePresent = action.payload;
             console.log(action.payload);
         },
+        changeAuto: (state, action) => {
+            state.valuePresent = action.payload;
+        }
         // getInfoBanner: (state) => {
         //     getInfoJson();
         // }
@@ -76,6 +79,7 @@ export const {
     changeClickChoose,
     lastPic,
     nextPic,
+    changeAuto,
 } = findMusicSlice.actions;
 
 export default findMusicSlice.reducer;

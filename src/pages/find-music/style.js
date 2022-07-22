@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+// import  from "styled-components";
 import pic from '../../static/r-icon.png';
 import arrowPic from '../../static/arrow.png';
 import downloadPic from '../../static/download.png';
@@ -77,12 +78,65 @@ export const BannerContainer = styled.div`
     /* transform: translateY(1px); */
 `;
 
+const fadeInAndOut = keyframes`
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 0.2;
+    }
+`;
+
 export const BannerImg = styled.div`
     width: 730px;
     height: 283.75px;
     background-size: cover;
     display: block;
     overflow: hidden;
+    animation-name: ${fadeInAndOut};
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    /* opacity: 0; */
+    /* animation-iteration-count:  */
+    /* opacity: 1; */
+    /* transition: opacity ; */
+    /* &.stage-enter {
+        opacity: 0.2;
+    }
+
+    &.stage-enter-active {
+        opacity: 1;
+        transition: opacity 1s ease;
+    }
+
+    &.stage-enter-done {
+        opacity: 1;
+        transition: opacity 1s ease;
+    }
+
+    &.stage-exit {
+        opacity: 1;
+    }
+
+    &.stage-exit-active {
+        opacity: 0.2;
+        transition: opacity 1s ease;
+    }
+    
+    &.stage-exit-done {
+        opacity: 0.2;
+    } */
 `;
 
 export const LeftArrow = styled.div`
