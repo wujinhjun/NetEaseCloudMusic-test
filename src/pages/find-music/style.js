@@ -105,11 +105,11 @@ export const BannerImg = styled.div`
     background-size: cover;
     display: block;
     overflow: hidden;
-    animation-name: ${fadeInAndOut};
+    /* animation-name: ${fadeInAndOut};
     animation-timing-function: linear;
     animation-duration: 3.01s;
-    /* animation-iteration-count: 1; */
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
+    animation-iteration-count: infinite; */
     cursor: pointer;
 `;
 
