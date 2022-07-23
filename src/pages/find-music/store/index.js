@@ -6,6 +6,8 @@ const defaultState = {
     valuePresent: 0,
     minValueBanner: 0,
     maxValueBanner: 7,
+
+    recommendList: [],
 }
 
 const findMusicSlice = createSlice({
@@ -33,15 +35,16 @@ const findMusicSlice = createSlice({
         changeAuto: (state, action) => {
             state.valuePresent = action.payload;
         }
-        // getInfoBanner: (state) => {
-        //     getInfoJson();
-        // }
     },
     extraReducers: (builder) => {
         builder
             .addCase(getInfoBanner.fulfilled, (state, action) => {
                 state.pictureData = action.payload;
+            })
+            .addCase(getInfoRecommend.fulfilled, (state, action) => {
                 // console.log(action.payload);
+                state.recommendList = action.payload;
+                // console.log(state.recommendList);
             })
     }
 });
@@ -51,29 +54,17 @@ export const getInfoBanner = createAsyncThunk(
     async () => {
         const result = await axios.get('/api/banner.json');
         return result.data.data.pictureData;
-        // let result;
-        // axios.get('/api/banner.json')
-        //     .then((res) => {
-        //         // console.log(res.data.data);
-        //         result = res.data.data
-        //         return result;
-        //     })
+    }
+);
 
-        // return result;
-    })
-
-// export const getInfoBanner = (state) => {
-//     return (dispatch) => {
-//         axios.get('/api/banner.json')
-//             .then((res) => {
-//                 console.log(res.data.data);
-//                 state.pictureData = res.data.data.pictureData;
-//             })
-//             .catch(() => {
-//                 console.log("fail");
-//             })
-//     }
-// }
+export const getInfoRecommend = createAsyncThunk(
+    "getInfoRecommend",
+    async () => {
+        const result = await axios.get('/api/discover/recommend.json');
+        // console.log(result.data.data.recommendListData);
+        return result.data.data.recommendListData
+    }
+);
 
 export const {
     changeClickChoose,

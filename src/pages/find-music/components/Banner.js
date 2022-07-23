@@ -14,26 +14,25 @@ import {
     DotItem
 } from "../style";
 import { useDispatch, useSelector } from "react-redux";
-import { CSSTransition, SwitchTransition } from "react-transition-group";
 import { changeClickChoose, lastPic, nextPic, getInfoBanner, changeAuto } from '../store';
 
 const Banner = (props) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        console.log('mounted');
+        console.log('banner mounted');
         dispatch(getInfoBanner());
     }, [])
 
     const valuePresent = useSelector((state) => state.findMusic.valuePresent);
     // const [timer, setTimer] = useState(0);
     // const [count, setCount] = useState(valuePresent);
-    const [showState, setShowState] = useState(true);
+    // const [showState, setShowState] = useState(true);
 
     const choosePoint = (index) => {
         // clearTimeout(timer);
         dispatch(changeClickChoose(index));
-    }
+    };
 
     useEffect(() => {
         const id = setInterval(() => {
@@ -44,11 +43,14 @@ const Banner = (props) => {
                 // setCount(count => count = 0);
                 dispatch(changeAuto(0));
             }
-            setShowState(showState);
+            // setShowState(showState);
         }, 3000);
 
-        return () => clearInterval(id);
+        return () => (
+            clearInterval(id)
+        );
     });
+
     const pictureData = useSelector(state => state.findMusic.pictureData);
     const list = Array.from(Array(8), (item, index) => index);
     let back;
@@ -57,7 +59,6 @@ const Banner = (props) => {
         back = pictureData[valuePresent].backImg;
         image = pictureData[valuePresent].image;
     }
-    // let showState = true;
     // (pictureData[valuePresent]) && (const back = pictureData[valuePresent].backImg)
     return (
         (pictureData[valuePresent]) && (<Fragment>
@@ -80,7 +81,7 @@ const Banner = (props) => {
                         }} />
                     {/* </CSSTransition> */}
                     {/* </SwitchTransition> */}
-                    <LeftArrow onClick={() => { dispatch(lastPic()) }} />
+                    <LeftArrow onClick={() => dispatch(lastPic())} />
                     <RightArrow onClick={() => dispatch(nextPic())} />
 
                     <DotsContainer>

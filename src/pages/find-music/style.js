@@ -80,7 +80,10 @@ export const BannerContainer = styled.div`
 
 const fadeInAndOut = keyframes`
     0% {
-        opacity: 1;
+        opacity: 0.2;
+    }
+    5% {
+        opacity: 0.8;
     }
     10% {
         opacity: 1;
@@ -92,7 +95,7 @@ const fadeInAndOut = keyframes`
         opacity: 0.6;
     }
     100% {
-        opacity: 0.2;
+        opacity: 0.1;
     }
 `;
 
@@ -104,39 +107,10 @@ export const BannerImg = styled.div`
     overflow: hidden;
     animation-name: ${fadeInAndOut};
     animation-timing-function: linear;
-    animation-duration: 3s;
+    animation-duration: 3.01s;
+    /* animation-iteration-count: 1; */
     animation-iteration-count: infinite;
-    animation-direction: normal;
-    /* opacity: 0; */
-    /* animation-iteration-count:  */
-    /* opacity: 1; */
-    /* transition: opacity ; */
-    /* &.stage-enter {
-        opacity: 0.2;
-    }
-
-    &.stage-enter-active {
-        opacity: 1;
-        transition: opacity 1s ease;
-    }
-
-    &.stage-enter-done {
-        opacity: 1;
-        transition: opacity 1s ease;
-    }
-
-    &.stage-exit {
-        opacity: 1;
-    }
-
-    &.stage-exit-active {
-        opacity: 0.2;
-        transition: opacity 1s ease;
-    }
-    
-    &.stage-exit-done {
-        opacity: 0.2;
-    } */
+    cursor: pointer;
 `;
 
 export const LeftArrow = styled.div`
@@ -241,7 +215,6 @@ export const DotsContainer = styled.div`
     width: 730px;
     height: 20px;
     text-align: center;
-    /* background-color: red; */
 `;
 
 export const DotItem = styled.div`
@@ -256,7 +229,5 @@ export const DotItem = styled.div`
     &.active, :hover {
         background-position: -16px -343px;
     }
-    /* transform: translateX(2px); */
     margin: 0 1.7px;
-    /* background-color: red; */
 `;
