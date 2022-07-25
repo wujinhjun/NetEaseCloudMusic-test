@@ -35,12 +35,13 @@ const Swiper = (props) => {
     // console.log(`len: ${len}`);
 
     const [indexPic, setIndexPic] = useState(0);
+    const idTimer = useRef(0);
+    const [play, setPlay] = useState(true);
     // console.log(`init: ${indexPic}`);
 
 
     // const [idTimer, setIdTimer] = useState(0);
-    const idTimer = useRef(0);
-    const [play, setPlay] = useState(true);
+
 
     const nextImage = () => {
         clearInterval(idTimer.current);

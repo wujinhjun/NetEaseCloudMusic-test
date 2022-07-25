@@ -3,37 +3,17 @@ import axios from "axios";
 
 const defaultState = {
     pictureData: [],
-    valuePresent: 0,
-    minValueBanner: 0,
-    maxValueBanner: 7,
-
     recommendList: [],
+    active: "推荐",
 }
 
 const findMusicSlice = createSlice({
     name: 'findMusic',
     initialState: defaultState,
     reducers: {
-        lastPic: (state) => {
-            if (state.valuePresent > state.minValueBanner) {
-                state.valuePresent--;
-            } else {
-                state.valuePresent = state.maxValueBanner;
-            }
-        },
-        nextPic: (state) => {
-            if (state.valuePresent < state.maxValueBanner) {
-                state.valuePresent++;
-            } else {
-                state.valuePresent = state.minValueBanner;
-            }
-        },
-        changeClickChoose: (state, action) => {
-            state.valuePresent = action.payload;
-            console.log(action.payload);
-        },
-        changeAuto: (state, action) => {
-            state.valuePresent = action.payload;
+        changeChooseDiscover: (state, action) => {
+            state.active = action.payload;
+            // console.log(action);
         }
     },
     extraReducers: (builder) => {
@@ -67,10 +47,7 @@ export const getInfoRecommend = createAsyncThunk(
 );
 
 export const {
-    changeClickChoose,
-    lastPic,
-    nextPic,
-    changeAuto,
+    changeChooseDiscover,
 } = findMusicSlice.actions;
 
 export default findMusicSlice.reducer;

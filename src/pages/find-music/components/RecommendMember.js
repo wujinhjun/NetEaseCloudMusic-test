@@ -26,12 +26,12 @@ const RecommendMember = (props) => {
         isRadio,
         listUrl
     } = props
-    // console.log(props);
+    console.log(props);
     return (
         <Fragment>
             <Cover>
                 <Pic style={{ backgroundImage: `url(${photoUrl})`, }}></Pic>
-                <Mask href={{ listUrl }}></Mask>
+                <Mask href={listUrl}></Mask>
                 <BottomIcon>
                     <HeadsetIcon></HeadsetIcon>
                     <NumberAudience>{numViews}</NumberAudience>

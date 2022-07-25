@@ -14,7 +14,7 @@ export const HeaderWrapper = styled.div`
     width: 1100px;
     height: 70px;
     margin: 0 auto;
-    transform: translateX(-12px);
+    /* transform: translateX(-12px); */
 `;
 
 export const LOGO = styled.div`

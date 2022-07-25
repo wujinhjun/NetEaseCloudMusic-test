@@ -24,7 +24,7 @@ export const TheTopWrapper = styled.div`
     height: 34px;
     margin: 0 auto;
     padding-left: 180px;
-    transform: translateX(-12px);
+    /* transform: translateX(-12px); */
     /* background-color: green; */
 `;
 

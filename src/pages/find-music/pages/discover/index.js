@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect } from "react";
-
 import { useDispatch, useSelector } from "react-redux/es/exports";
 
 import {
@@ -17,8 +16,8 @@ import {
 import NewBanner from "../../components/NewBanner";
 import Title from "../../components/Title";
 import RecommendMember from "../../components/RecommendMember";
-import { getInfoRecommend } from "../../store";
 
+import { getInfoRecommend } from "../../store";
 
 const Discover = () => {
 
@@ -40,7 +39,7 @@ const Discover = () => {
         dispatch(getInfoRecommend());
     }, [])
     const recommendList = useSelector((state) => state.findMusic.recommendList)
-    console.log(recommendList);
+    // console.log(recommendList);
     return (
         <Fragment>
             <NewBanner></NewBanner>
@@ -52,7 +51,20 @@ const Discover = () => {
                             <Title name="热门推荐"
                                 other={listMember} />
                             <ListForRecommend>
-                                <ListItemForRecommend>
+                                {recommendList.map((item, index) => {
+                                    return (
+                                        <ListItemForRecommend key={item.id}>
+                                            <RecommendMember
+                                                title={item.title}
+                                                photoUrl={item.photoUrl}
+                                                numViews={item.numViews}
+                                                isRadio={item.isRadio}
+                                                listUrl={item.listUrl}
+                                            />
+                                        </ListItemForRecommend>
+                                    )
+                                })}
+                                {/* <ListItemForRecommend>
                                     <RecommendMember
                                         title="「轻音乐·安静」舒缓放松，缓解压力"
                                         photoUrl="https://raw.githubusercontent.com/wujinhjun/wujinhjun-pic/main/2.jpg"
@@ -123,7 +135,7 @@ const Discover = () => {
                                         isRadio={true}
                                         listUrl="https://music.163.com/#/playlist?id=7550592680"
                                     />
-                                </ListItemForRecommend>
+                                </ListItemForRecommend> */}
                             </ListForRecommend>
 
                         </DivideDiv>
