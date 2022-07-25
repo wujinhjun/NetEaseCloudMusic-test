@@ -12,7 +12,9 @@ import {
     CardTip,
     DotsContainer,
     DotItem
-} from "../style";
+} from "./style";
+
+import Swiper from "./Swiper";
 import { useDispatch, useSelector } from "react-redux";
 import { changeClickChoose, lastPic, nextPic, getInfoBanner, changeAuto } from '../store';
 
@@ -59,6 +61,7 @@ const Banner = (props) => {
         back = pictureData[valuePresent].backImg;
         image = pictureData[valuePresent].image;
     }
+
     // (pictureData[valuePresent]) && (const back = pictureData[valuePresent].backImg)
     return (
         (pictureData[valuePresent]) && (<Fragment>

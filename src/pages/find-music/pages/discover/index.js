@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect } from "react";
-import Banner from "../../components/Banner";
+
 import { useDispatch, useSelector } from "react-redux/es/exports";
 
 import {
@@ -14,6 +14,8 @@ import {
     ListItemForRecommend
 } from "./style";
 
+import NewBanner from "../../components/NewBanner";
+import Banner from "../../components/Banner";
 import Title from "../../components/Title";
 import RecommendMember from "../../components/RecommendMember";
 import { getInfoRecommend } from "../../store";
@@ -42,7 +44,8 @@ const Discover = () => {
     console.log(recommendList);
     return (
         <Fragment>
-            <Banner />
+            <NewBanner></NewBanner>
+            {/* <Banner /> */}
             <DiscoverWrapper>
                 <DiscoverContentLeft>
                     <ContentContainer>
