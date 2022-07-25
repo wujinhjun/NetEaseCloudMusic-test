@@ -17,11 +17,10 @@ const NewBanner = () => {
         <Fragment>
             <Swiper
                 picList={pictureData}
-                cycle="3000"
+                cycle={3000}
                 ifDot={true}
-                ifArrow="true"
+                ifArrow={true}
             />
-
         </Fragment>
     )
 }

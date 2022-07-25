@@ -21,6 +21,10 @@ export const BannerWrapper = styled.div`
     /* z-index: -1; */
     backface-visibility: hidden;
     position: absolute;
+    /* cursor: pointer; */
+    &.others {
+        display: none;
+    }
 `;
 
 export const BannerContainer = styled.div`
@@ -31,39 +35,39 @@ export const BannerContainer = styled.div`
     /* transform: translateY(1px); */
 `;
 
-const fadeInAndOut = keyframes`
-    0% {
-        opacity: 0.2;
-    }
-    5% {
-        opacity: 0.8;
-    }
-    10% {
-        opacity: 1;
-    }
-    40% {
-        opacity: 1;
-    }
-    75% {
-        opacity: 0.6;
-    }
-    100% {
-        opacity: 0.1;
-    }
-`;
-
 export const BannerImg = styled.div`
     width: 730px;
     height: 283.75px;
     background-size: cover;
     display: block;
     overflow: hidden;
-    /* animation-name: ${fadeInAndOut};
-    animation-timing-function: linear;
-    animation-duration: 3.01s;
-    animation-iteration-count: 1;
-    animation-iteration-count: infinite; */
     cursor: pointer;
+    &.others {
+        /* display: none; */
+        transition: opacity 1s;
+        opacity: 0;
+        z-index: 0;
+    }
+    &.active {
+        z-index: 10;
+        transition: opacity 1s;
+        opacity: 1;
+    }
+
+    &.bannerImg-enter {
+        opacity: 0;
+    }
+    &.bannerImg-enter-active {
+        opacity: 1;
+        transition: opacity 1s;
+    }
+    &.bannerImg-exit {
+        opacity: 1;
+    }
+    &.bannerImg-exit-active {
+        opacity: 0;
+        transition: opacity 1s;
+    }
 `;
 
 export const LeftArrow = styled.div`
@@ -105,6 +109,7 @@ export const DotsContainer = styled.div`
     width: 730px;
     height: 20px;
     text-align: center;
+    
 `;
 
 export const DotItem = styled.div`
@@ -127,6 +132,7 @@ export const SwiperCardContainer = styled.div`
     height: 285px;
     position: relative;
     margin: 0 auto;
+    cursor: pointer;
 `;
 
 export const CardDownloadContainer = styled.div`
@@ -139,6 +145,7 @@ export const CardDownloadContainer = styled.div`
     width: 254px;
     height: 285px;
     background-image: url(${downloadPic});
+    cursor: initial;
 `;
 
 export const CardPicLink = styled.a`
@@ -150,6 +157,7 @@ export const CardPicLink = styled.a`
         background-image: url(${downloadPic});
         background-position: 0 -290px;
     }
+    cursor: pointer;
 `;
 
 export const CardTip = styled.p`
@@ -165,6 +173,7 @@ export const CardTip = styled.p`
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     transform: translateY(1px);
+    
 `;
 
 export const CardShadowLeft = styled.span`
@@ -192,6 +201,11 @@ export const CardShadowRight = styled.span`
     height:285px;
     background-image: url(${arrowPic});
     background-position: -20px 0;
+`;
+
+export const MouseListener = styled.div`
+    width: calc(100% - 254px);
+    height: 100%;
 `;
 
 
