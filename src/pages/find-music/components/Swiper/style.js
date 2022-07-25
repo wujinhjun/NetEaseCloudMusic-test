@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 import arrowPic from '../../../../static/arrow.png';
 import downloadPic from '../../../../static/download.png';
@@ -206,13 +206,4 @@ export const CardShadowRight = styled.span`
 export const MouseListener = styled.div`
     width: calc(100% - 254px);
     height: 100%;
-`;
-
-
-// for recommend
-export const Cover = styled.div`
-    width: 140px;
-    height: 140px;
-    position: relative;
-    display: block;
 `;

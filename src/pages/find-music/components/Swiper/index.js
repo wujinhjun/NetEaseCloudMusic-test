@@ -45,7 +45,7 @@ const Swiper = (props) => {
     const nextImage = () => {
         clearInterval(idTimer.current);
         setIndexPic(indexPic => (indexPic + 1) % parseInt(numPic));
-        console.log("next");
+        // console.log("next");
     };
 
     const lastImage = () => {
@@ -63,14 +63,14 @@ const Swiper = (props) => {
         idTimer.current = setInterval(() => setPlay(!play), cycle);
         // nextImage();
         // setIdTimer(id);
-        console.log("start: timer");
+        // console.log("start: timer");
     };
 
     const stopSwiper = () => {
         clearInterval(idTimer.current);
         // setPlay(false);
-        console.log("stop: clear timer");
-        console.log(`stop: ${idTimer.current}`);
+        // console.log("stop: clear timer");
+        // console.log(`stop: ${idTimer.current}`);
     };
 
     useEffect(() => {
@@ -78,7 +78,7 @@ const Swiper = (props) => {
             if (numPic > 0) {
                 nextImage();
             }
-            console.log(`effect work`);
+            // console.log(`effect work`);
         }, cycle);
         // console.log(`effect: ${idTimer.current}`);
         // setIdTimer(id);

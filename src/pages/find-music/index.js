@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import { TheTopContainer, TheTopItem, TheTopWrapper, RIcon } from './style';
-import Banner from "./components/Banner";
 import Discover from "./pages/discover";
 
 const FindMusic = () => {

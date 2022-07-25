@@ -15,7 +15,6 @@ import {
 } from "./style";
 
 import NewBanner from "../../components/NewBanner";
-import Banner from "../../components/Banner";
 import Title from "../../components/Title";
 import RecommendMember from "../../components/RecommendMember";
 import { getInfoRecommend } from "../../store";

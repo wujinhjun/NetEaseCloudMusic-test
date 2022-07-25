@@ -1,8 +1,8 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 
-import { changeClickChoose, lastPic, nextPic, getInfoBanner, changeAuto } from '../store';
+import { getInfoBanner } from '../store';
 
 import Swiper from "./Swiper";
 const NewBanner = () => {
