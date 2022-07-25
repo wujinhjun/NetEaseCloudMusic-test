@@ -29,24 +29,15 @@ const Swiper = (props) => {
         ifDot,
     } = props
     const list = Array.from(Array(picList.length), (item, index) => index);
-    // let index = initialIndex;
     const numPic = picList.length;
-    // console.log(picList.length);
-    // console.log(`len: ${len}`);
 
     const [indexPic, setIndexPic] = useState(0);
     const idTimer = useRef(0);
     const [play, setPlay] = useState(true);
-    // console.log(`init: ${indexPic}`);
-
-
-    // const [idTimer, setIdTimer] = useState(0);
-
 
     const nextImage = () => {
         clearInterval(idTimer.current);
         setIndexPic(indexPic => (indexPic + 1) % parseInt(numPic));
-        // console.log("next");
     };
 
     const lastImage = () => {
@@ -62,16 +53,10 @@ const Swiper = (props) => {
     const startSwiper = () => {
         stopSwiper();
         idTimer.current = setInterval(() => setPlay(!play), cycle);
-        // nextImage();
-        // setIdTimer(id);
-        // console.log("start: timer");
     };
 
     const stopSwiper = () => {
         clearInterval(idTimer.current);
-        // setPlay(false);
-        // console.log("stop: clear timer");
-        // console.log(`stop: ${idTimer.current}`);
     };
 
     useEffect(() => {
@@ -79,21 +64,12 @@ const Swiper = (props) => {
             if (numPic > 0) {
                 nextImage();
             }
-            // console.log(`effect work`);
         }, cycle);
-        // console.log(`effect: ${idTimer.current}`);
-        // setIdTimer(id);
-        // startSwiper();
-        // console.log(`indexPic: ${indexPic}`);
-        // console.log(idTimer);
         return () => {
             clearInterval(idTimer.current);
-            // console.log("clear timer");
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [indexPic, numPic, play]);
-
-    // console.log(indexPic);
 
     return (
         <Fragment>

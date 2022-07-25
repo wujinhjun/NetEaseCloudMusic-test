@@ -26,7 +26,7 @@ const RecommendMember = (props) => {
         isRadio,
         listUrl
     } = props
-    console.log(props);
+    // console.log(props);
     return (
         <Fragment>
             <Cover>
