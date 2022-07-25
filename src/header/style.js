@@ -6,6 +6,7 @@ export const HeaderLine = styled.div`
     height: 70px;
     background-color: #242424;
     border-bottom: 1px solid #000;
+    
 `;
 
 export const HeaderWrapper = styled.div`
@@ -13,6 +14,7 @@ export const HeaderWrapper = styled.div`
     width: 1100px;
     height: 70px;
     margin: 0 auto;
+    transform: translateX(-12px);
 `;
 
 export const LOGO = styled.div`
