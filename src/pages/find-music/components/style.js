@@ -114,7 +114,7 @@ export const TitleName = styled.a`
 
 export const MoreIconContainer = styled.span`
     float: right;
-    margin-top: 9px;
+    margin-top: 12px;
     /* background-color: red; */
 `;
 
@@ -123,6 +123,7 @@ export const MoreContent = styled.a`
     cursor: pointer;
     text-decoration: none;
     font-size: 12px;
+    /* transform: translateY(3px); */
 `;
 
 export const MoreIcon = styled.div`
@@ -133,5 +134,68 @@ export const MoreIcon = styled.div`
     vertical-align: middle;
     background: url(${picTitle}) no-repeat 0 9999px;
     background-position: 0 -240px;
-    transform: translateY(1px);
+    /* transform: translateY(1px); */
+`;
+
+// for singer list
+export const SingerList = styled.ul`
+    margin: 6px 0 14px 20px;
+    overflow: auto;
+`;
+
+export const SingerListItem = styled.li`
+    margin-top: 14px;
+    float: left;
+    width: 210px;
+    height: 62px;
+    background: #fafafa;
+    list-style: none;
+`;
+
+export const SingerListItemLink = styled.a`
+    float: left;
+    width: 210px;
+    height: 62px;
+    background: #fafafa;
+    text-decoration: none;
+    cursor: pointer;
+    color: #333;
+`;
+
+export const SingerListItemHead = styled.div`
+    float: left;
+    width: 62px;
+    height: 62px;
+`;
+
+export const SingerListItemInfo = styled.div`
+    float: left;
+    width: 133px;
+    height: 60px;
+    padding-left: 14px;
+    border: 1px solid #e9e9e9;
+    border-left: none;
+`;
+
+export const SingerName = styled.h4`
+    margin-top: 11px;
+    width: 90%;
+    height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-block;
+`;
+
+export const SingerIntroduction = styled.p`
+    width: 90%;
+    margin-top: 6px;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
 `;

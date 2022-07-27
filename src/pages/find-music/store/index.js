@@ -4,6 +4,7 @@ import axios from "axios";
 const defaultState = {
     pictureData: [],
     recommendList: [],
+    singerList: [],
     active: "推荐",
 }
 
@@ -26,6 +27,10 @@ const findMusicSlice = createSlice({
                 state.recommendList = action.payload;
                 // console.log(state.recommendList);
             })
+            .addCase(getInfoSingerList.fulfilled, (state, action) => {
+                // console.log(action.payload);
+                state.singerList = action.payload;
+            })
     }
 });
 
@@ -45,6 +50,15 @@ export const getInfoRecommend = createAsyncThunk(
         return result.data.data.recommendListData
     }
 );
+
+export const getInfoSingerList = createAsyncThunk(
+    'getInfoSingerList',
+    async () => {
+        const result = await axios.get('/api/discover/singerList.json');
+        // console.log(result.data.data.singerList);
+        return result.data.data.singerList;
+    }
+)
 
 export const {
     changeChooseDiscover,

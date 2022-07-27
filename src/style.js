@@ -28,6 +28,9 @@ export const GlobalStyle = createGlobalStyle`
     }
     body {
         line-height: 1;
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #333;
     }
     ol, ul {
         list-style: none;

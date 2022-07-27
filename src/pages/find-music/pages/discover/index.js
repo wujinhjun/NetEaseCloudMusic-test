@@ -10,14 +10,26 @@ import {
     SortListMember,
     LineDivide,
     ListForRecommend,
-    ListItemForRecommend
+    ListItemForRecommend,
+    DiscoverContentRight,
+    ContentContainerRight,
+    DescribeText,
+    ButtonLogin,
+    SingerListContainer,
+    TheTitle,
+    MoreContainer,
+    TitleText,
+    ButtonToBeMusician,
+    BeMusicianLink,
+    Content
 } from "./style";
 
 import NewBanner from "../../components/NewBanner";
 import Title from "../../components/Title";
 import RecommendMember from "../../components/RecommendMember";
+import SingerListPage from "../../components/SingerListPage";
 
-import { getInfoRecommend } from "../../store";
+import { getInfoRecommend, getInfoSingerList } from "../../store";
 
 const Discover = () => {
 
@@ -35,10 +47,12 @@ const Discover = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        console.log('discover recommend mounted');
+        console.log('discover recommend and singer list mounted');
         dispatch(getInfoRecommend());
+        dispatch(getInfoSingerList());
     }, [])
     const recommendList = useSelector((state) => state.findMusic.recommendList)
+    const singerList = useSelector((state) => state.findMusic.singerList);
     // console.log(recommendList);
     return (
         <Fragment>
@@ -72,6 +86,26 @@ const Discover = () => {
                         </DivideDiv>
                     </ContentContainer>
                 </DiscoverContentLeft>
+                <DiscoverContentRight>
+                    <ContentContainerRight>
+                        <DescribeText>登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机</DescribeText>
+                        <ButtonLogin>用户登录</ButtonLogin>
+                    </ContentContainerRight>
+                    <SingerListContainer>
+                        <TheTitle>
+                            <TitleText>入驻歌手</TitleText>
+                            <MoreContainer>查看全部 {">"}</MoreContainer>
+                        </TheTitle>
+                        <SingerListPage singerList={singerList} />
+                        <ButtonToBeMusician>
+                            <BeMusicianLink>
+                                <Content>
+                                    申请成为音乐人
+                                </Content>
+                            </BeMusicianLink>
+                        </ButtonToBeMusician>
+                    </SingerListContainer>
+                </DiscoverContentRight>
             </DiscoverWrapper>
         </Fragment >
     )
