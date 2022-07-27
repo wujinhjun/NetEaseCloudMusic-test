@@ -1,0 +1,42 @@
+{
+    "success": true,
+    "data": {
+        "singerList": [
+            {
+                "id": 0,
+                "head": "https://p2.music.126.net/rCsLFXha6SLis0tV7yZ5fA==/109951165588539704.jpg?param=62y62",
+                "name": "张惠妹aMEI",
+                "introduction": "台湾歌手张惠妹",
+                "link": "https://music.163.com/#/user/home?id=29879272"
+            },
+            {
+                "id": 1,
+                "head": "https://p1.music.126.net/TQZGbxp-xnJla-q7ii9z0A==/1364493985498917.jpg?param=62y62",
+                "name": "吴莫愁Momo",
+                "introduction": "《中国好声音》选手吴莫愁",
+                "link": "https://music.163.com/#/user/home?id=650120"
+            },
+            {
+                "id": 2,
+                "head": "https://p2.music.126.net/ZEEvSOoXV7Dv2QEkqUN3zg==/109951165625860507.jpg?param=62y62",
+                "name": "孙楠",
+                "introduction": "歌手孙楠 代表作《你快回来》《燃烧》",
+                "link": "https://music.163.com/#/user/home?id=198554"
+            },
+            {
+                "id": 3,
+                "head": "https://p2.music.126.net/1GIlkxKmvKu66ufU83FyvA==/31885837222663.jpg?param=62y62",
+                "name": "麦田老狼",
+                "introduction": "歌手，音乐人。代表作《同桌的你》等。",
+                "link": "https://music.163.com/#/user/home?id=2000268"
+            },
+            {
+                "id": 4,
+                "head": "https://p2.music.126.net/MXMZYksJmsa0gcGkuk2mDQ==/109951167712155407.jpg?param=62y62",
+                "name": "陈楚生",
+                "introduction": "唱作歌手",
+                "link": "https://music.163.com/#/user/home?id=39002"
+            }
+        ]
+    }
+}
