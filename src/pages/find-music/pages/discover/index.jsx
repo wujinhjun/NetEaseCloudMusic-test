@@ -50,6 +50,7 @@ const Discover = () => {
         console.log('discover recommend and singer list mounted');
         dispatch(getInfoRecommend());
         dispatch(getInfoSingerList());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     const recommendList = useSelector((state) => state.findMusic.recommendList)
     const singerList = useSelector((state) => state.findMusic.singerList);
