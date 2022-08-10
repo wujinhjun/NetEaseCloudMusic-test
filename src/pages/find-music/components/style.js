@@ -4,7 +4,7 @@ import recommendCover from "../../../static/coverall.png";
 import iconAll from "../../../static/iconall.png";
 import icon from "../../../static/icon.png";
 import picTitle from "../../../static/indexDiscover.png";
-
+import indexPic from "../../../static/index.png";
 // for recommend
 export const Cover = styled.div`
     width: 140px;
@@ -198,4 +198,72 @@ export const SingerIntroduction = styled.p`
     text-overflow: ellipsis;
     white-space: nowrap;
     word-wrap: normal;
+`;
+
+// for new disc
+
+export const DiscWrapper = styled.div`
+    margin-bottom: 7px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    display: block;
+`;
+
+export const ImgBack = styled.img`
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+`;
+
+export const CoverAlbum = styled.div`
+    background: url(${recommendCover});
+    width: 118px;
+    height: 100px;
+    background-position: 0 -570px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+`;
+
+export const NameAndAuthor = styled.p`
+    width: 90%;
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    cursor: pointer;
+`;
+
+export const NameLink = styled.a`
+    color: #000;
+    &:hover{
+        text-decoration: underline;
+    }
+`;
+
+export const AuthorLink = styled(NameLink)`
+    color: #666;
+`;
+
+
+export const ListAlbum = styled.ul`
+    /* overflow: auto; */
+    position: absolute;
+    top: 0;
+    width: 645px;
+    margin: 28px 0 0 0;
+`;
+
+export const ListItemAlbum = styled.li`
+    float: left;
+    display: inline;
+    /* width: 118px; */
+    height: 150px;
+    margin-left: 11px;
+    background: url(${indexPic});
+    background-position: -260px 100px;
 `;

@@ -47,11 +47,13 @@ export const BannerImg = styled.div`
         transition: opacity 1s;
         opacity: 0;
         z-index: 0;
+        /* pointer-events: none; */
     }
     &.active {
         z-index: 10;
         transition: opacity 1s;
         opacity: 1;
+        /* pointer-events: all; */
     }
 
     &.bannerImg-enter {
