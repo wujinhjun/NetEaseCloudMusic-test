@@ -1,6 +1,6 @@
-import Header from "./header";
+import Header from "./components/Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import FindMusic from "./pages/find-music";
+import FindMusic from "./components/FindMusic";
 import { Fragment } from "react";
 
 function App() {

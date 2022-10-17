@@ -1,6 +1,9 @@
 import NewDisc from "./NewDisc";
 
-import { ListAlbum, ListItemAlbum } from "./style";
+import {
+  ListAlbum,
+  ListItemAlbum,
+} from "../../styles/FindMusicComponentsStyle";
 
 const NewDiscList = () => {
   return (

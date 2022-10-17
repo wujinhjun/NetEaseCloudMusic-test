@@ -6,7 +6,7 @@ import {
   NameAndAuthor,
   NameLink,
   AuthorLink,
-} from "./style";
+} from "../../styles/FindMusicComponentsStyle";
 
 const NewDisc = (props) => {
   const {

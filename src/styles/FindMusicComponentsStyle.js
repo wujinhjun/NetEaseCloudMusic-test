@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-import recommendCover from "../../../static/coverall.png";
-import iconAll from "../../../static/iconall.png";
-import icon from "../../../static/icon.png";
-import picTitle from "../../../static/indexDiscover.png";
-import indexPic from "../../../static/index.png";
+import recommendCover from "../static/coverall.png";
+import iconAll from "../static/iconall.png";
+import icon from "../static/icon.png";
+import picTitle from "../static/indexDiscover.png";
+import indexPic from "../static/index.png";
 // for recommend
 export const Cover = styled.div`
     width: 140px;

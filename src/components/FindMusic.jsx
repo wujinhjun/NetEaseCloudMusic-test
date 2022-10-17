@@ -1,11 +1,16 @@
 import React, { Fragment } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { TheTopContainer, TheTopItem, TheTopWrapper, RIcon } from "./style";
-import Discover from "./pages/discover";
-import RankList from "./pages/rank";
+import {
+  TheTopContainer,
+  TheTopItem,
+  TheTopWrapper,
+  RIcon,
+} from "../styles/FindMusicStyle";
+import Discover from "./FindMusic/Discover";
+import RankList from "./FindMusic/Rank";
 
-import { changeChooseDiscover } from "./store";
+import { changeChooseDiscover } from "../store/FindMusicStore";
 
 const FindMusic = () => {
   const dispatch = useDispatch();

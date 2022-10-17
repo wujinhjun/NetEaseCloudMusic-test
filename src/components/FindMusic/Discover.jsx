@@ -28,15 +28,18 @@ import {
   BeMusicianLink,
   Content,
   RollContainer,
-} from "./style";
+} from "../../styles/DiscoverStyle";
 
-import NewBanner from "../../components/NewBanner";
-import Title from "../../components/Title";
-import RecommendMember from "../../components/RecommendMember";
-import SingerListPage from "../../components/SingerListPage";
-import NewDiscList from "../../components/NewDiscList";
+import NewBanner from "./NewBanner";
+import Title from "./Title";
+import RecommendMember from ".//RecommendMember";
+import SingerListPage from "./SingerListPage";
+import NewDiscList from "./NewDiscList";
 
-import { getInfoRecommend, getInfoSingerList } from "../../store";
+import {
+  getInfoRecommend,
+  getInfoSingerList,
+} from "../../store/FindMusicStore";
 
 const Discover = () => {
   const listMember = (

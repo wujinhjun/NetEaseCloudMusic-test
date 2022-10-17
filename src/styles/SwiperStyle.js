@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-import arrowPic from '../../../../static/arrow.png';
-import downloadPic from '../../../../static/download.png';
+import arrowPic from '../static/arrow.png';
+import downloadPic from '../static/download.png';
 // for banner
 
 export const SwiperWrapper = styled.div`

@@ -17,7 +17,7 @@ import {
   CardShadowLeft,
   CardTip,
   MouseListener,
-} from "./style";
+} from "../../styles/SwiperStyle";
 
 // picList, cycle, dot?, arrow?
 

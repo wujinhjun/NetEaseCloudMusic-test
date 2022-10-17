@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-import picBack from "../../../../static/wrap1.png";
-import indexDiscover from "../../../../static/indexDiscover.png";
-import button2 from "../../../../static/button2.png";
-import indexPic from "../../../../static/index.png";
+import picBack from "../static/wrap1.png";
+import indexDiscover from "../static/indexDiscover.png";
+import button2 from "../static/button2.png";
+import indexPic from "../static/index.png";
 
 export const DiscoverWrapper = styled.div`
   background: url(${picBack}) repeat-y 100% 100%;

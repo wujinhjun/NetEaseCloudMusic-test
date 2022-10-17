@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import headerReducer from '../header/store';
-import findMusicReducer from '../pages/find-music/store';
+import headerReducer from './headerStore';
+import findMusicReducer from './FindMusicStore';
 
 const store = configureStore({
     reducer: {

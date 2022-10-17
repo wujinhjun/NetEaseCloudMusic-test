@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { useDispatch, connect } from "react-redux";
 import { Link, Navigate } from "react-router-dom";
-import { changeChoose } from "./store";
+import { changeChoose } from "../store/headerStore";
 import {
   HeaderWrapper,
   HeaderLine,
@@ -13,7 +13,7 @@ import {
   SearchIcon,
   CreatorCenter,
   Login,
-} from "./style.js";
+} from "../styles/HeaderStyle.jsx";
 
 const Header = (props) => {
   const dispatch = useDispatch();
