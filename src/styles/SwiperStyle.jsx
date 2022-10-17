@@ -8,9 +8,6 @@ export const SwiperWrapper = styled.div`
   position: relative;
   height: 285px;
   width: 100%;
-  /* left: 50%;
-    transform: translateX(-25.75%); */
-  /* margin: 0 auto; */
 `;
 export const BannerWrapper = styled.div`
   background-size: 6000px;
@@ -18,10 +15,8 @@ export const BannerWrapper = styled.div`
   transform: translateY(-1px);
   height: 285px;
   width: 100%;
-  /* z-index: -1; */
   backface-visibility: hidden;
   position: absolute;
-  /* cursor: pointer; */
   &.others {
     display: none;
   }
@@ -32,7 +27,6 @@ export const BannerContainer = styled.div`
   width: 982px;
   height: 285px;
   margin: 0 auto;
-  /* transform: translateY(1px); */
 `;
 
 export const BannerImg = styled.div`
@@ -43,17 +37,14 @@ export const BannerImg = styled.div`
   overflow: hidden;
   cursor: pointer;
   &.others {
-    /* display: none; */
     transition: opacity 1s;
     opacity: 0;
     z-index: 0;
-    /* pointer-events: none; */
   }
   &.active {
     z-index: 10;
     transition: opacity 1s;
     opacity: 1;
-    /* pointer-events: all; */
   }
 
   &.bannerImg-enter {
@@ -115,7 +106,6 @@ export const DotsContainer = styled.div`
 
 export const DotItem = styled.div`
   display: inline-block;
-  /* position: relative; */
   width: 20px;
   height: 20px;
   text-align: center;
@@ -141,8 +131,6 @@ export const CardDownloadContainer = styled.div`
   position: absolute;
   top: -1px;
   z-index: 10;
-  /* top: 105px; */
-  /* right: 460px; */
   right: -1px;
   width: 254px;
   height: 285px;
