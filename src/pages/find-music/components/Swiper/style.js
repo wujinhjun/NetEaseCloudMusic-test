@@ -105,13 +105,12 @@ export const RightArrow = styled.div`
 `;
 
 export const DotsContainer = styled.div`
-    position: absolute;
-    top: 259px;
-    left: 460px;
+    position: relative;
+    transform: translate(-125px, -27px);
     width: 730px;
     height: 20px;
     text-align: center;
-    
+    margin: 0 auto;
 `;
 
 export const DotItem = styled.div`

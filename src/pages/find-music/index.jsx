@@ -32,7 +32,7 @@ const FindMusic = () => {
             className={"歌单" === active ? "active icon" : "icon"}
           >
             歌单
-            <RIcon />
+            {/* <RIcon /> */}
           </TheTopItem>
           <TheTopItem
             onClick={() => dispatch(changeChooseDiscover("主播电台"))}
