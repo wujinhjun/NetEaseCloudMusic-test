@@ -3,7 +3,6 @@ import styled from "styled-components";
 import picBack from "../static/wrap1.png";
 import indexDiscover from "../static/indexDiscover.png";
 import button2 from "../static/button2.png";
-import indexPic from "../static/index.png";
 
 export const DiscoverWrapper = styled.div`
   background: url(${picBack}) repeat-y 100% 100%;
@@ -14,14 +13,12 @@ export const DiscoverWrapper = styled.div`
   border: 1px solid #d3d3d3;
   border-width: 0 1px;
   overflow: auto;
-  /* background-color: red; */
 `;
 
 export const DiscoverContentLeft = styled.div`
   float: left;
   width: 100%;
   margin-right: -250px;
-  /* background-color: blue; */
 `;
 
 export const ContentContainer = styled.div`
@@ -30,7 +27,6 @@ export const ContentContainer = styled.div`
 `;
 
 export const DivideDiv = styled.div`
-  /* display: block; */
   position: relative;
   &.recommend {
     margin-bottom: 35px;
@@ -41,7 +37,6 @@ export const SortListContainer = styled.div`
   float: left;
   margin: 7px 0 0 20px;
   z-index: 10;
-  /* width: 239.25px; */
   transform: translateY(3px);
 `;
 
@@ -64,11 +59,6 @@ export const ListForRecommend = styled.ul`
   padding: 0;
   box-sizing: border-box;
   overflow: auto;
-  /* height: auto; */
-  /* width: 100%; */
-  /* height: 100%; */
-  /* position: relative; */
-  /* float: left; */
 `;
 
 export const ListItemForRecommend = styled.li`
@@ -77,9 +67,7 @@ export const ListItemForRecommend = styled.li`
   padding-left: 42px;
   padding-bottom: 30px;
   float: left;
-  /* display: inline-block; */
   overflow: hidden;
-  /* padding: 0 0 30px 50px; */
   line-height: 1.4;
 `;
 
@@ -87,8 +75,6 @@ export const DiscoverContentRight = styled.div`
   float: right;
   position: relative;
   width: 250px;
-  /* height: 100px; */
-  /* background-color: blue; */
 `;
 
 export const ContentContainerRight = styled.div`
@@ -132,14 +118,12 @@ export const TheTitle = styled.h3`
   margin: -1px 20px 0 20px;
   border-bottom: 1px solid #ccc;
   color: #333;
-  /* transform: translateY(5px); */
 `;
 
 export const TitleText = styled.span`
   float: left;
   color: #333;
   font-weight: 700;
-  /* margin-top: 3px; */
   margin-top: 3px;
 `;
 
@@ -147,8 +131,8 @@ export const MoreContainer = styled.a`
   float: right;
   font-weight: normal;
   color: #666;
-  cursor: pointer;
   margin-top: 3px;
+  cursor: pointer;
 `;
 
 export const ButtonToBeMusician = styled.div``;
@@ -184,7 +168,6 @@ export const Content = styled.div`
   overflow: hidden;
   vertical-align: top;
   text-align: center;
-  /* cursor: pointer; */
 `;
 
 export const NewDiscWrapper = styled.div`
@@ -211,10 +194,10 @@ export const LeftArrowLink = styled.a`
   width: 17px;
   height: 17px;
   background-position: -260px -75px;
+  cursor: pointer;
   &:hover {
     background-position: -280px -75px;
   }
-  cursor: pointer;
 `;
 
 export const RightArrowLink = styled.a`
@@ -224,10 +207,10 @@ export const RightArrowLink = styled.a`
   height: 17px;
   background: url(${indexDiscover});
   background-position: -300px -75px;
+  cursor: pointer;
   &:hover {
     background-position: -320px -75px;
   }
-  cursor: pointer;
 `;
 
 export const RollContainer = styled.div`
