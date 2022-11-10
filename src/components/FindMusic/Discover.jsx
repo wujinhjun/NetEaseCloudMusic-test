@@ -13,8 +13,7 @@ import {
   ListItemForRecommend,
   NewDiscWrapper,
   NewDiscInner,
-  LeftArrowLink,
-  RightArrowLink,
+
   //   fro right
   DiscoverContentRight,
   ContentContainerRight,
@@ -27,14 +26,13 @@ import {
   ButtonToBeMusician,
   BeMusicianLink,
   Content,
-  RollContainer,
 } from "../../styles/DiscoverStyle";
 
 import NewBanner from "./NewBanner";
 import Title from "./Title";
 import RecommendMember from ".//RecommendMember";
 import SingerListPage from "./SingerListPage";
-import NewDiscList from "./NewDiscList";
+import DiscListSwiper from "./DiscListSwiper";
 
 import {
   getInfoRecommend,
@@ -58,7 +56,7 @@ const Discover = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log("discover recommend and singer list mounted");
+    // console.log("discover recommend and singer list mounted");
     dispatch(getInfoRecommend());
     dispatch(getInfoSingerList());
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -68,8 +66,7 @@ const Discover = () => {
   // console.log(recommendList);
   return (
     <Fragment>
-      <NewBanner></NewBanner>
-      {/* <Banner /> */}
+      <NewBanner />
       <DiscoverWrapper>
         <DiscoverContentLeft>
           <ContentContainer>
@@ -93,18 +90,9 @@ const Discover = () => {
             </DivideDiv>
             <DivideDiv>
               <Title name="新碟上架" />
-              {/* <NewDisc
-                picLink="https://p4.music.126.net/xx0IesJ90lCktDZy_AlLqA==/109951167708703253.jpg?param=100y100"
-                name="Celebrate"
-                author="TWICE"
-              ></NewDisc> */}
               <NewDiscWrapper>
                 <NewDiscInner>
-                  <LeftArrowLink>&nbsp;</LeftArrowLink>
-                  <RollContainer>
-                    <NewDiscList></NewDiscList>
-                  </RollContainer>
-                  <RightArrowLink>&nbsp;</RightArrowLink>
+                  <DiscListSwiper />
                 </NewDiscInner>
               </NewDiscWrapper>
             </DivideDiv>

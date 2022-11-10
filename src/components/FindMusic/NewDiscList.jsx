@@ -1,14 +1,17 @@
 import NewDisc from "./NewDisc";
 
-import {
-  ListAlbum,
-  ListItemAlbum,
-} from "../../styles/FindMusicComponentsStyle";
+import { ListAlbum } from "../../styles/FindMusicComponentsStyle";
 
-const NewDiscList = () => {
+const NewDiscList = (props) => {
+  const { location } = props;
+  console.log(location);
   return (
-    <ListAlbum>
-      <NewDisc></NewDisc>
+    <ListAlbum location={location} indexZ={location === 0 ? 100 : -1}>
+      <NewDisc />
+      <NewDisc />
+      <NewDisc />
+      <NewDisc />
+      <NewDisc />
     </ListAlbum>
   );
 };
