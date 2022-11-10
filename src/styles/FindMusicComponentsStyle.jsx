@@ -248,18 +248,23 @@ export const AuthorLink = styled(NameLink)`
 `;
 
 export const ListAlbum = styled.ul`
+  background-color: #f5f5f5;
   position: absolute;
   top: 0;
   width: 645px;
   margin: 28px 0 0 0;
+  left: ${(props) => props.location * 645}px;
+  transition: all 1.5s ease-in-out;
+  z-index: ${(props) => props.indexZ};
 `;
 
 export const ListItemAlbum = styled.li`
   float: left;
   display: inline;
+  width: 118px;
   height: 150px;
   margin-left: 11px;
-  background: url(${indexPic});
+  background: url(${indexPic}) no-repeat;
   background-position: -260px 100px;
 `;
 
@@ -269,6 +274,7 @@ export const SwiperWrapper = styled.div`
   height: 285px;
   width: 100%;
 `;
+
 export const BannerWrapper = styled.div`
   background-size: 6000px;
   background-position: center center;

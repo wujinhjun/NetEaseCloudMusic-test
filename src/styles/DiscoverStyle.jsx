@@ -184,6 +184,7 @@ export const NewDiscInner = styled.div`
   padding-left: 16px;
   background: #f5f5f5;
   border: 1px solid #fff;
+  z-index: 10;
 `;
 
 export const LeftArrowLink = styled.a`
@@ -218,7 +219,6 @@ export const RollContainer = styled.div`
   width: 645px;
   height: 180px;
   overflow: hidden;
-  position: relative;
   position: relative;
   zoom: 1;
 `;
