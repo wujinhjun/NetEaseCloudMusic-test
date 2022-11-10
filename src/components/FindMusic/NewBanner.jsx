@@ -7,7 +7,7 @@ import Swiper from "./Swiper";
 const NewBanner = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    console.log("banner mounted");
+    // console.log("banner mounted");
     dispatch(getInfoBanner());
   }, []);
 

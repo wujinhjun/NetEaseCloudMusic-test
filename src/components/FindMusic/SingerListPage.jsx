@@ -12,7 +12,7 @@ import {
 
 const SingerListPage = (props) => {
   const { singerList } = props;
-  console.log(singerList);
+  //   console.log(singerList);
   return (
     <SingerList>
       {singerList.map((item) => {
