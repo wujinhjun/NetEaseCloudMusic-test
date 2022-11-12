@@ -25,27 +25,33 @@ const Header = (props) => {
           <LOGO />
         </Link>
         <Nav>
-          <NavItem
-            onClick={() => dispatch(changeChoose("发现音乐"))}
-            className={"发现音乐" === active ? "active" : ""}
-          >
-            发现音乐
-            {"发现音乐" === active && <IconBottom key="iconBottom" />}
-          </NavItem>
-          <NavItem
-            onClick={() => dispatch(changeChoose("我的音乐"))}
-            className={"我的音乐" === active ? "active" : ""}
-          >
-            我的音乐
-            {"我的音乐" === active && <IconBottom key="iconBottom" />}
-          </NavItem>
-          <NavItem
-            onClick={() => dispatch(changeChoose("关注"))}
-            className={"关注" === active ? "active" : ""}
-          >
-            关注
-            {"关注" === active && <IconBottom key="iconBottom" />}
-          </NavItem>
+          <Link to="/">
+            <NavItem
+              onClick={() => dispatch(changeChoose("发现音乐"))}
+              className={"发现音乐" === active ? "active" : ""}
+            >
+              发现音乐
+              {"发现音乐" === active && <IconBottom key="iconBottom" />}
+            </NavItem>
+          </Link>
+          <Link to="/my/">
+            <NavItem
+              onClick={() => dispatch(changeChoose("我的音乐"))}
+              className={"我的音乐" === active ? "active" : ""}
+            >
+              我的音乐
+              {"我的音乐" === active && <IconBottom key="iconBottom" />}
+            </NavItem>
+          </Link>
+          <Link to="/friend/">
+            <NavItem
+              onClick={() => dispatch(changeChoose("关注"))}
+              className={"关注" === active ? "active" : ""}
+            >
+              关注
+              {"关注" === active && <IconBottom key="iconBottom" />}
+            </NavItem>
+          </Link>
           <NavItem
             onClick={() =>
               (window.open("about:blank").location.href =
@@ -66,13 +72,15 @@ const Header = (props) => {
             音乐人
             {"音乐人" === active && <IconBottom key="iconBottom" />}
           </NavItem>
-          <NavItem
-            onClick={() => dispatch(changeChoose("下载客户端"))}
-            className={"下载客户端" === active ? "active" : ""}
-          >
-            下载客户端
-            {"下载客户端" === active && <IconBottom key="iconBottom" />}
-          </NavItem>
+          <Link to="/download">
+            <NavItem
+              onClick={() => dispatch(changeChoose("下载客户端"))}
+              className={"下载客户端" === active ? "active" : ""}
+            >
+              下载客户端
+              {"下载客户端" === active && <IconBottom key="iconBottom" />}
+            </NavItem>
+          </Link>
           <NavItem className="download"></NavItem>
         </Nav>
         <Login>登录</Login>
